@@ -5,7 +5,7 @@ public class Hero {
     private int Damage;
     private int Speed;
     private int Turn;
-    private Artifact Item;
+    private Boon Item;
 
     public String getName() {
         return Name;
@@ -48,7 +48,7 @@ public class Hero {
         return this;
     }
 
-    public Hero setItem(Artifact item) {
+    public Hero setItem(Boon item) {
         Item = item;
         return this;
     }

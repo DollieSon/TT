@@ -3,7 +3,7 @@ package Tower;
 public class Helpers {
 
     // add stats here and there
-    public static void EquipArtifact(Artifact art, Hero He){
+    public static void EquipArtifact(Boon art, Hero He){
         He.setItem(art);
         art.setOwner(He);
     }

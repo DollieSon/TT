@@ -1,11 +1,11 @@
 package Tower;
 
-public abstract class Artifact {
+public abstract class Boon {
 
     private Hero owner;
     public abstract void Apply();
 
-    public Artifact setOwner(Hero owner) {
+    public Boon setOwner(Hero owner) {
         this.owner = owner;
         return this;
     }
