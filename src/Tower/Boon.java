@@ -1,15 +1,8 @@
 package Tower;
 
 public abstract class Boon {
-
-    private Hero owner;
+    BoonScaler scalar;
+    String Description;
     public abstract void Apply();
 
-    public Boon setOwner(Hero owner) {
-        this.owner = owner;
-        return this;
-    }
-    public Hero getOwner() {
-        return owner;
-    }
 }

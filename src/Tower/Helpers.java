@@ -3,7 +3,7 @@ package Tower;
 public class Helpers {
 
     // add stats here and there
-    public static void EquipArtifact(Boon art, Hero He){
+    public static void EquipArtifact(Boon art, Guard He){
         He.setItem(art);
         art.setOwner(He);
     }
@@ -12,8 +12,8 @@ public class Helpers {
         player.setHealth(player.getMaxHealth());
         enemy.setHealth(enemy.getMaxHealth());
         while((player.getHealth() > 0 && enemy.getHealth() > 0)){
-            Hero good = player.getHeroTurn();
-            Hero bad = enemy.getHeroTurn();
+            Guard good = player.getHeroTurn();
+            Guard bad = enemy.getHeroTurn();
             if(good.getTurn() > bad.getTurn()){
                 player.setHealth(player.getHealth() - bad.getDamage());
                 System.out.println("Player takes Damage: " + bad.getDamage() + " " + bad.getName() + " Attacks");

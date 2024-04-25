@@ -4,13 +4,13 @@ import java.util.ArrayList;
 public class Tower {
     public static final int MAXHEROES = 3;
     int Health,MaxHealth;
-    private ArrayList<Hero> Guards;
+    private ArrayList<Guard> Guards;
 
     private int currTurn;
     public Tower(int maxHealth) {
         Health = maxHealth;
         MaxHealth = maxHealth;
-        Guards = new ArrayList<Hero>();
+        Guards = new ArrayList<Guard>();
         currTurn = 0;
     }
 
@@ -27,16 +27,16 @@ public class Tower {
         return this;
     }
 
-    public Tower addGuard(Hero guard){
+    public Tower addGuard(Guard guard){
         if(Guards.size() < 3){
             Guards.add(guard);
         }
         return this;
 
     }
-    public Hero getHeroTurn(){
-        Hero MinHero = Guards.get(0);
-        for(Hero H: Guards){
+    public Guard getHeroTurn(){
+        Guard MinHero = Guards.get(0);
+        for(Guard H: Guards){
             if(MinHero.getTurn() > H.getTurn()){
                 MinHero = H;
             }
@@ -44,7 +44,7 @@ public class Tower {
         return MinHero;
     }
     public void resetHeroTurns(){
-        for(Hero H: Guards){
+        for(Guard H: Guards){
             H.setTurn(H.getSpeed());
         }
     }

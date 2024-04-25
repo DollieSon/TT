@@ -1,6 +1,6 @@
 package Tower;
 
-public class Hero {
+public class Guard {
     private String Name;
     private int Damage;
     private int Speed;
@@ -11,12 +11,12 @@ public class Hero {
         return Name;
     }
 
-    public Hero setName(String name) {
+    public Guard setName(String name) {
         Name = name;
         return this;
     }
 
-    public Hero(int damage, int speed, String Name) {
+    public Guard(int damage, int speed, String Name) {
         Damage = damage;
         Speed = speed;
         Turn = Speed;
@@ -26,7 +26,7 @@ public class Hero {
         return Damage;
     }
 
-    public Hero setDamage(int damage) {
+    public Guard setDamage(int damage) {
         Damage = damage;
         return this;
     }
@@ -35,7 +35,7 @@ public class Hero {
         return Speed;
     }
 
-    public Hero setSpeed(int speed) {
+    public Guard setSpeed(int speed) {
         Speed = speed;
         return this;
     }
@@ -43,12 +43,12 @@ public class Hero {
         return Turn;
     }
 
-    public Hero setTurn(int turn) {
+    public Guard setTurn(int turn) {
         Turn = turn;
         return this;
     }
 
-    public Hero setItem(Boon item) {
+    public Guard setItem(Boon item) {
         Item = item;
         return this;
     }
