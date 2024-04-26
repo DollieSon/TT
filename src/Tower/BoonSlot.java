@@ -1,15 +1,19 @@
 package Tower;
 
 public class BoonSlot {
-    private int boonType;
+
+    public enum TYPE{
+        STATIC,GROWTH,PERFECT
+    }
+    private TYPE boonType;
     private Boon equipedBoon;
     private int Level;
 
-    public int getBoonType() {
+    public TYPE getBoonType() {
         return boonType;
     }
 
-    public BoonSlot setBoonType(int boonType) {
+    public BoonSlot setBoonType(TYPE boonType) {
         this.boonType = boonType;
         return this;
     }
@@ -32,7 +36,7 @@ public class BoonSlot {
         return this;
     }
 
-    public BoonSlot(int boonType, Boon equipedBoon, int level) {
+    public BoonSlot(TYPE boonType, Boon equipedBoon, int level) {
         this.boonType = boonType;
         this.equipedBoon = equipedBoon;
         Level = level;

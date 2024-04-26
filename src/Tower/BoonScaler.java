@@ -3,20 +3,20 @@ package Tower;
 import java.util.Comparator;
 
 public class BoonScaler {
-    int Level;
+    int reqLevel;
     int Scaler;
 
     public BoonScaler(int level, int scaler) {
-        Level = level;
+        reqLevel = level;
         Scaler = scaler;
     }
 
-    public int getLevel() {
-        return Level;
+    public int getreqLevel() {
+        return reqLevel;
     }
 
-    public BoonScaler setLevel(int level) {
-        Level = level;
+    public BoonScaler setreqLevel(int level) {
+        reqLevel = level;
         return this;
     }
 
@@ -29,10 +29,10 @@ public class BoonScaler {
         return this;
     }
 
-    public class sortByLevel implements Comparator<BoonScaler>{
+    public class sortByreqLevel implements Comparator<BoonScaler>{
         @Override
         public int compare(BoonScaler o1,BoonScaler o2) {
-            return Integer.compare(o1.getLevel(),o2.getLevel());
+            return Integer.compare(o1.getreqLevel(),o2.getreqLevel());
         }
     }
 }

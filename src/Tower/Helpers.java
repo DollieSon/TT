@@ -3,10 +3,6 @@ package Tower;
 public class Helpers {
 
     // add stats here and there
-    public static void EquipArtifact(Boon art, Guard He){
-        He.setItem(art);
-        art.setOwner(He);
-    }
     public static void Fight(Tower player, Tower enemy){
         //reset health
         player.setHealth(player.getMaxHealth());
