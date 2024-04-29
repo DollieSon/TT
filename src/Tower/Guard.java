@@ -1,12 +1,13 @@
 package Tower;
 
+import java.util.ArrayList;
+
 public class Guard {
     private String Name;
     private int Damage;
     private int Speed;
     private int Turn;
-    private Boon Item;
-
+    private ArrayList<BoonSlot> Slots;
     public String getName() {
         return Name;
     }
@@ -16,11 +17,12 @@ public class Guard {
         return this;
     }
 
-    public Guard(int damage, int speed, String Name) {
+    public Guard(int damage, int speed, String Name, ArrayList<BoonSlot> Bs) {
         Damage = damage;
         Speed = speed;
         Turn = Speed;
         this.Name = Name;
+        Slots = Bs;
     }
     public int getDamage() {
         return Damage;
@@ -48,8 +50,9 @@ public class Guard {
         return this;
     }
 
-    public Guard setItem(Boon item) {
-        Item = item;
-        return this;
+    public ArrayList<BoonSlot> getSlots(){
+        return Slots;
     }
+
+
 }

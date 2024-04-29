@@ -2,11 +2,12 @@ package Tower.Artifacts;
 
 import Tower.*;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class TestArt extends Boon {
     boolean isEquipped;
-    public TestArt(BoonScaler scalar, String description) {
+    public TestArt(ArrayList<BoonScaler> scalar, String description) {
         //should the category be built-in?
         super(scalar, description, boonAppyCategory.Equip);
         isEquipped = false;
@@ -22,5 +23,8 @@ public class TestArt extends Boon {
             isEquipped = false;
         }
         owner.setDamage(newDamage);
+    }
+    public boolean isActivated(){
+        return isEquipped;
     }
 }

@@ -48,4 +48,8 @@ public class Tower {
             H.setTurn(H.getSpeed());
         }
     }
+
+    public ArrayList<Guard> getGuards() {
+        return Guards;
+    }
 }

@@ -29,7 +29,7 @@ public class BoonScaler {
         return this;
     }
 
-    public class sortByreqLevel implements Comparator<BoonScaler>{
+    public static class sortByreqLevel implements Comparator<BoonScaler>{
         @Override
         public int compare(BoonScaler o1,BoonScaler o2) {
             return Integer.compare(o1.getreqLevel(),o2.getreqLevel());
