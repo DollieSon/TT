@@ -14,8 +14,8 @@ public class TestArt extends Boon {
     }
 
     @Override
-    public void Apply(int Level, Tower mainTower, Tower enemyTower, Guard owner) {
-        int newDamage = Level + owner.getDamage();
+    public void Apply(int Power, Tower mainTower, Tower enemyTower, Guard owner) {
+        int newDamage = Power + owner.getDamage();
         if(!isEquipped){
             isEquipped = true;
         }else{
